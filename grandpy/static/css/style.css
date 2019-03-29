@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'TarponMotel';
+    src: url('../font/TarponMotel-webfont.eot') format('eot'),
+         url('../font/TarponMotel-webfont.woff') format('woff'),
+         url('../font/TarponMotel-webfont.ttf') format('truetype'),
+         url('../font/TarponMotel-webfont.svg') format('svg');
+}
+
+#wiki
+{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+
+body
+{
+    background: #e7e5e5;
+    display: flex;
+}
+
+#site-title
+{
+    text-align: center;
+    font-family: TarponMotel, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+    text-shadow: 3px 3px 5px black;
+}
+
+#head-img
+{
+    /* position: absolute;
+    top: 0;
+    left: 20px; */
+    max-height: 100px;
+    /* margin-top: 20px; */
+}
+
+#head-content
+{
+    /* position: relative;
+    vertical-align: middle;
+    margin: auto; */
+
+}
+
+h1 + p
+{
+    font-family: TarponMotel, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+header
+{
+    margin-top: 5px;
+    background-color: whitesmoke;
+}
+
+
+footer
+{
+    text-align: center;
+    min-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+}
+
+#form, #answer
+{
+    /* background-color: aqua; */
+    margin-top: 30px;
+}
+
+.rounded-circle
+{
+    /* Rajout d'une propriété au style par défaut */
+    margin-left: 5px;
+}
+
+#auteur
+{
+    text-align: center;
+    font-family: TarponMotel, Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.user_dlg
+{
+    font-style: italic;
+}
+
+.new_dlg
+{
+    color: cornflowerblue;
+}
+
+#map
+{
+    min-height: 500px;
+}
+
+/* Position et couleur bulle */
+a span{ 
+    position:absolute;
+    margin-top:25px; 
+    margin-left:-25px;
+    color:#fff; 
+    background:rgba(172, 166, 166, 0.603); 
+    padding:10px; 
+    border-radius:6px; 
+    max-height: 50px;
+    min-width: 250px;
+    text-align: center;
+    
+    /* Faire disparaire infobulle par défaut */
+    /* On determine l'origine de la rotation */ 
+    transform:scale(0) rotate(-180deg);
+    /* Faire durer l'effet */
+    transition:all .25s;
+    /* Effet sur la transparence */ 
+    opacity:0;
+}
+
+/* Apparition de la bulle avec le scale à 1 */ 
+a:hover span, a:focus span{ 
+    transform:scale(1) rotate(0);
+    /* Effet sur la transparence */ 
+    opacity:1;
+}
