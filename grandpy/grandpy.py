@@ -49,20 +49,18 @@ class DataMgt:
         answer = ' '.join([word for word in self.question_text.split(" ")
             if word.lower() not in all_stop_words]).strip()
         
-        print("Réponse : " + answer)
         return answer
 
     def find_location(self):
         # Retreive information from Google Maps API
         map_querystring["input"] = self.answer
         map_req = requests.get(map_url, params=map_querystring)
+        self.map_status = "KO"
         if len(map_req.json()["candidates"]) > 0:
             # If the place has been found, store the wanted informations
             self.place_address = map_req.json()["candidates"][0]["formatted_address"]
             self.place_coord = map_req.json()["candidates"][0]["geometry"]
             self.map_status = "OK"
-        else:
-            self.map_status = "KO"
 
     def extract_wiki(self):
 
