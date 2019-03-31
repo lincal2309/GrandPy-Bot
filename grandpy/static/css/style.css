@@ -58,13 +58,12 @@ footer
 
 #form, #answer
 {
-    /* background-color: aqua; */
     margin-top: 30px;
 }
 
 .rounded-circle
 {
-    /* Rajout d'une propriété au style par défaut */
+    /* Overcharge default class with an additional specific property */
     margin-left: 5px;
 }
 
@@ -90,7 +89,7 @@ footer
     min-height: 500px;
 }
 
-/* Position et couleur bulle */
+/* Popup position and properties */
 a span{ 
     position:absolute;
     margin-top:25px; 
@@ -103,18 +102,15 @@ a span{
     min-width: 250px;
     text-align: center;
     
-    /* Faire disparaire infobulle par défaut */
-    /* On determine l'origine de la rotation */ 
+    /* Initial popup collapse */
     transform:scale(0) rotate(-180deg);
-    /* Faire durer l'effet */
+    /* Duration of effect */
     transition:all .25s;
-    /* Effet sur la transparence */ 
     opacity:0;
 }
 
-/* Apparition de la bulle avec le scale à 1 */ 
+/* Set scale to 1 to make the popup appear */ 
 a:hover span, a:focus span{ 
     transform:scale(1) rotate(0);
-    /* Effet sur la transparence */ 
     opacity:1;
 }

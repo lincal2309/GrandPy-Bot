@@ -44,10 +44,6 @@ class DataMgt:
             if char in special_chars:
                 self.question_text = self.question_text.replace(char, ' ')
 
-        # print("Special chars : " + self.ques)
-        # answer = ''.join([char for char in self.question_text
-        #     if char not in special_chars])
-
         # Remove all stop words (and remove potential spaces at the end of the string)
         #  Parse words to remove stop words and buld the string back
         answer = ' '.join([word for word in self.question_text.split(" ")
